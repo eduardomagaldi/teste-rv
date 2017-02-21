@@ -1,0 +1,37 @@
+*
+	box-sizing: border-box;
+
+//measurements
+wrapperMaxWidth = 1600px;
+contentPadding = 0 40px;
+
+//colors
+heroBgColor = #92b8ad;
+
+.wrapper
+	width: 100%;
+	margin: 0 auto;
+	box-sizing: border-box;
+	
+	&.hero-wrapper
+		background-color: heroBgColor;
+	
+.content-wrapper
+	max-width: wrapperMaxWidth;
+	margin: 0 auto;
+	
+.hero
+	background: url('/img/hero.jpg') no-repeat;
+	height: 768px;
+	padding: contentPadding;
+	width: 100%;
+	background-position: center top;
+	
+.nav
+	ul
+		padding: 0;
+		margin: 0;
+
+		> li
+			list-style: none;
+			display: inline-block;

@@ -1,0 +1,30 @@
+* {
+  box-sizing: border-box;
+}
+.wrapper {
+  width: 100%;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+.wrapper.hero-wrapper {
+  background-color: #92b8ad;
+}
+.content-wrapper {
+  max-width: 1600px;
+  margin: 0 auto;
+}
+.hero {
+  background: url("/img/hero.jpg") no-repeat;
+  height: 768px;
+  padding: 0 40px;
+  width: 100%;
+  background-position: center top;
+}
+.nav ul {
+  padding: 0;
+  margin: 0;
+}
+.nav ul > li {
+  list-style: none;
+  display: inline-block;
+}
