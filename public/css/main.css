@@ -1,5 +1,23 @@
-* {
-  box-sizing: border-box;
+@font-face {
+  font-family: 'rubik';
+  src: url("/fonts/rubik-bold-webfont.woff2") format('woff2'), url("/fonts/rubik-bold-webfont.woff") format('woff');
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'rubik';
+  src: url("/fonts/rubik-medium-webfont.woff2") format('woff2'), url("/fonts/rubik-medium-webfont.woff") format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'rubik';
+  src: url("/fonts/rubik-regular-webfont.woff2") format('woff2'), url("/fonts/rubik-regular-webfont.woff") format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+body {
+  font-family: 'Rubik';
 }
 .wrapper {
   width: 100%;
@@ -12,6 +30,13 @@
 .content-wrapper {
   max-width: 1600px;
   margin: 0 auto;
+  box-sizing: border-box;
+}
+.header {
+  margin-top: 30px;
+}
+.logo {
+  width: 60px;
 }
 .hero {
   background: url("/img/hero.jpg") no-repeat;
@@ -19,6 +44,14 @@
   padding: 0 40px;
   width: 100%;
   background-position: center top;
+  box-sizing: border-box;
+  background-size: cover;
+  overflow: hidden;
+  font-size: 0;
+}
+.nav {
+  float: right;
+  font-size: 15px;
 }
 .nav ul {
   padding: 0;
@@ -27,4 +60,33 @@
 .nav ul > li {
   list-style: none;
   display: inline-block;
+  margin-left: 40px;
+  vertical-align: middle;
+}
+.nav ul > li a {
+  text-decoration: none;
+  color: #542d4c;
+  text-transform: uppercase;
+}
+.nav ul > li a .icon {
+  width: 35px;
+}
+.half {
+  width: 50%;
+  display: inline-block;
+  font-size: 15px;
+}
+.main-title {
+  font-size: 60px;
+  color: #542d4c;
+  text-transform: uppercase;
+  font-weight: normal;
+}
+.btn {
+  background: #542d4c;
+  border-radius: 50%;
+  padding: 10px;
+  display: inline-block;
+  color: #fff;
+  text-decoration: none;
 }

@@ -1,12 +1,18 @@
-*
-	box-sizing: border-box;
+@import fonts;
 
 //measurements
 wrapperMaxWidth = 1600px;
 contentPadding = 0 40px;
+mainFontSize = 15px;
+mainTitleFontSize = 60px;
 
 //colors
 heroBgColor = #92b8ad;
+mainHighlightColor = #542d4c;
+lightestColor = #fff;
+
+body
+	font-family: 'Rubik';
 
 .wrapper
 	width: 100%;
@@ -19,6 +25,13 @@ heroBgColor = #92b8ad;
 .content-wrapper
 	max-width: wrapperMaxWidth;
 	margin: 0 auto;
+	box-sizing: border-box;
+	
+.header
+	margin-top: 30px;
+	
+.logo
+	width: 60px;
 	
 .hero
 	background: url('/img/hero.jpg') no-repeat;
@@ -26,8 +39,15 @@ heroBgColor = #92b8ad;
 	padding: contentPadding;
 	width: 100%;
 	background-position: center top;
+	box-sizing: border-box;
+	background-size: cover;
+	overflow: hidden;
+	font-size: 0;
 	
 .nav
+	float: right;
+	font-size: mainFontSize;
+
 	ul
 		padding: 0;
 		margin: 0;
@@ -35,3 +55,32 @@ heroBgColor = #92b8ad;
 		> li
 			list-style: none;
 			display: inline-block;
+			margin-left: 40px;
+			vertical-align: middle;
+			
+			a
+				text-decoration: none;
+				color: mainHighlightColor;
+				text-transform: uppercase;
+				
+				.icon
+					width: 35px;
+				
+.half
+	width: 50%;
+	display: inline-block;
+	font-size: mainFontSize;
+	
+.main-title
+	font-size: mainTitleFontSize;
+	color: mainHighlightColor;
+	text-transform: uppercase;
+	font-weight: normal;
+
+.btn
+	background: mainHighlightColor;
+	border-radius: 50%;
+	padding: 10px;
+	display: inline-block;
+	color: lightestColor;
+	text-decoration: none;
