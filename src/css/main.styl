@@ -3,46 +3,60 @@
 //measurements
 wrapperMaxWidth = 1600px;
 contentPadding = 0 40px;
-mainFontSize = 15px;
+mainFontSize = 19px;
+buttonFontSize = 14px;
+secondaryTitleFontSize = 16px;
 mainTitleFontSize = 60px;
 
 //colors
 heroBgColor = #92b8ad;
 mainHighlightColor = #542d4c;
 lightestColor = #fff;
+bgContentColor = #f7f7f7;
 
 body
 	font-family: 'Rubik';
+	background-color: bgContentColor;
+	
+.pull-right
+	float: right;
 
 .wrapper
 	width: 100%;
 	margin: 0 auto;
+	padding: contentPadding;
 	box-sizing: border-box;
 	
 	&.hero-wrapper
 		background-color: heroBgColor;
+		padding: 0;
 	
 .content-wrapper
 	max-width: wrapperMaxWidth;
 	margin: 0 auto;
 	box-sizing: border-box;
 	
-.header
-	margin-top: 30px;
-	
 .logo
 	width: 60px;
+
+.header
+	margin-top: 30px;
+	flex: 1 100%;
+	margin-bottom: 30px;
 	
 .hero
 	background: url('/img/hero.jpg') no-repeat;
 	height: 768px;
-	padding: contentPadding;
 	width: 100%;
 	background-position: center top;
 	box-sizing: border-box;
 	background-size: cover;
 	overflow: hidden;
 	font-size: 0;
+	padding: contentPadding;
+	
+	display: flex;
+	flex-flow: row wrap;
 	
 .nav
 	float: right;
@@ -70,17 +84,36 @@ body
 	width: 50%;
 	display: inline-block;
 	font-size: mainFontSize;
-	
+	margin-top: -190px;
+	padding: 0 20px;
+	box-sizing: border-box;
+    
 .main-title
 	font-size: mainTitleFontSize;
 	color: mainHighlightColor;
 	text-transform: uppercase;
-	font-weight: normal;
+	font-weight: bold;
+	margin: 0;
+	
+.main-paragraph
+	color: mainHighlightColor;
+	margin-top: 0;
+	max-width: 450px;
 
 .btn
 	background: mainHighlightColor;
-	border-radius: 50%;
-	padding: 10px;
+	border-radius: 30px;
+	padding: 14px 60px;
 	display: inline-block;
 	color: lightestColor;
 	text-decoration: none;
+	font-size: buttonFontSize;
+	text-transform: uppercase;
+	
+.secondaryTitle
+	display: inline-block;
+	font-size: secondaryTitleFontSize;
+	margin-left: 50px;
+	
+	&:first-child
+		margin-left: 0;

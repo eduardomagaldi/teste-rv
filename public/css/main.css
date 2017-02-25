@@ -18,40 +18,50 @@
 }
 body {
   font-family: 'Rubik';
+  background-color: #f7f7f7;
+}
+.pull-right {
+  float: right;
 }
 .wrapper {
   width: 100%;
   margin: 0 auto;
+  padding: 0 40px;
   box-sizing: border-box;
 }
 .wrapper.hero-wrapper {
   background-color: #92b8ad;
+  padding: 0;
 }
 .content-wrapper {
   max-width: 1600px;
   margin: 0 auto;
   box-sizing: border-box;
 }
-.header {
-  margin-top: 30px;
-}
 .logo {
   width: 60px;
+}
+.header {
+  margin-top: 30px;
+  flex: 1 100%;
+  margin-bottom: 30px;
 }
 .hero {
   background: url("/img/hero.jpg") no-repeat;
   height: 768px;
-  padding: 0 40px;
   width: 100%;
   background-position: center top;
   box-sizing: border-box;
   background-size: cover;
   overflow: hidden;
   font-size: 0;
+  padding: 0 40px;
+  display: flex;
+  flex-flow: row wrap;
 }
 .nav {
   float: right;
-  font-size: 15px;
+  font-size: 19px;
 }
 .nav ul {
   padding: 0;
@@ -74,19 +84,38 @@ body {
 .half {
   width: 50%;
   display: inline-block;
-  font-size: 15px;
+  font-size: 19px;
+  margin-top: -190px;
+  padding: 0 20px;
+  box-sizing: border-box;
 }
 .main-title {
   font-size: 60px;
   color: #542d4c;
   text-transform: uppercase;
-  font-weight: normal;
+  font-weight: bold;
+  margin: 0;
+}
+.main-paragraph {
+  color: #542d4c;
+  margin-top: 0;
+  max-width: 450px;
 }
 .btn {
   background: #542d4c;
-  border-radius: 50%;
-  padding: 10px;
+  border-radius: 30px;
+  padding: 14px 60px;
   display: inline-block;
   color: #fff;
   text-decoration: none;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+.secondaryTitle {
+  display: inline-block;
+  font-size: 16px;
+  margin-left: 50px;
+}
+.secondaryTitle:first-child {
+  margin-left: 0;
 }
