@@ -7,8 +7,9 @@
 		<meta name="description" content="">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 
-		<link rel="stylesheet" href="css/normalize.css">
-		<link rel="stylesheet" href="css/main.css">
+		<link rel="stylesheet" href="/css/normalize.css">
+		<link rel="stylesheet" href="/css/main.css">
+		<link rel="stylesheet" href="/flickity/dist/flickity.css" media="screen">
 	</head>
 	<body>
 		<!--[if lte IE 9]>
@@ -39,7 +40,7 @@
 			</div>
 		</div>
 
-		<div class="wrapper">
+		<div class="wrapper content-wrapper">
 			<div class="controls-wrapper">
 				<h2 class="secondaryTitle">Type:</h2>
 
@@ -60,12 +61,23 @@
 				<a class="btn pull-right">See all products</a>
 
 				<hr />
+
+				<div class="main-carousel" data-flickity='{ "cellAlign": "left", "groupCells": 4, "prevNextButtons": false}'>
+					<div class="carousel-cell">1</div>
+					<div class="carousel-cell">2</div>
+					<div class="carousel-cell">3</div>
+					<div class="carousel-cell">4</div>
+					<div class="carousel-cell">5</div>
+					<div class="carousel-cell">6</div>
+					<div class="carousel-cell">7</div>
+					<div class="carousel-cell">8</div>
+				</div>
 			</div>
 		</div>
 
-		<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
-		<script>window.jQuery || document.write('<script src="js/vendor/jquery-3.1.1.min.js"><\/script>')</script>
-		<script src="js/plugins.js"></script>
+		<!-- <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+		<script>window.jQuery || document.write('<script src="js/vendor/jquery-3.1.1.min.js"><\/script>')</script> -->
+		<script src="/flickity/dist/flickity.pkgd.min.js"></script>
 		<script src="js/main.js"></script>
 
 		<!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->

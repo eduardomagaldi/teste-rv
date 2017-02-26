@@ -23,7 +23,7 @@ body
 
 .wrapper
 	width: 100%;
-	margin: 0 auto;
+	margin: 0 auto 30px auto;
 	padding: contentPadding;
 	box-sizing: border-box;
 	
@@ -31,10 +31,8 @@ body
 		background-color: heroBgColor;
 		padding: 0;
 	
-.content-wrapper
-	max-width: wrapperMaxWidth;
-	margin: 0 auto;
-	box-sizing: border-box;
+	&.content-wrapper
+		padding: 0 120px;
 	
 .logo
 	width: 60px;
@@ -117,3 +115,12 @@ body
 	
 	&:first-child
 		margin-left: 0;
+		
+.carousel-cell
+	background: white;
+	width: 289px;
+	height: 408px;
+	margin-right: 10px;
+	
+	&:last-child
+		margin-right: 0;
