@@ -23,6 +23,9 @@ body {
 .pull-right {
   float: right;
 }
+.fade {
+  opacity: 0.3;
+}
 .wrapper {
   width: 100%;
   margin: 0 auto 30px auto;
@@ -34,7 +37,7 @@ body {
   padding: 0;
 }
 .wrapper.content-wrapper {
-  padding: 0 120px;
+  padding: 0 130px;
 }
 .logo {
   width: 60px;

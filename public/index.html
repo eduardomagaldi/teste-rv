@@ -40,37 +40,78 @@
 			</div>
 		</div>
 
-		<div class="wrapper content-wrapper">
+		<div class="wrapper content-wrapper" ng-app>
 			<div class="controls-wrapper">
 				<h2 class="secondaryTitle">Type:</h2>
 
-				<input type="checkbox" name="armchairs">
+				<input type="checkbox" name="armchairs" ng-model="armchairs">
 				<label for="armchairs">armchairs</label>
 
-				<input type="checkbox" name="chairs">
+				<input type="checkbox" name="chairs" ng-model="chairs">
 				<label for="chairs">chairs</label>
 
 				<h2 class="secondaryTitle">Material:</h2>
 
-				<input type="checkbox" name="wood">
+				<input type="checkbox" name="wood" ng-model="wood">
 				<label for="wood">wood</label>
 
-				<input type="checkbox" name="foam">
+				<input type="checkbox" name="foam" ng-model="foam">
 				<label for="foam">foam</label>
 
 				<a class="btn pull-right">See all products</a>
 
 				<hr />
 
+				<h2>New armchairs</h2>
+				<!--  -->
+				<a class="button--show">show</a>
+
+				<div class="main-carousel carousel" data-flickity='{ "cellAlign": "left", "groupCells": 4, "prevNextButtons": false}'>
+					<div class="carousel-cell" ng-class="{fade: !wood && !armchair}">
+						<h3>Armchair / wood</h3>
+						<img src="/img/chair1.jpg">
+					</div>
+<!-- 					<div class="carousel-cell" ng-class="{fade: chairs}">
+						<h3>Armchair / foam</h3>
+						<img src="/img/chair2.jpg">
+					</div>
+					<div class="carousel-cell" ng-class="{fade: armchairs}">
+						<h3>Armchair / foam</h3>
+						<img src="/img/chair3.jpg">
+					</div>
+					<div class="carousel-cell" ng-class="{fade: wood}">
+						<h3>Armchair / wood</h3>
+						<img src="/img/chair4.jpg">
+					</div>
+					<div class="carousel-cell" ng-class="{fade: wood}">
+						<h3>Chair / wood</h3>
+						<img src="/img/chair5.jpg">
+					</div>
+					<div class="carousel-cell" ng-class="{fade: foam}">
+						<h3>Chair / foam</h3>
+						<img src="/img/chair6.jpg">
+					</div>
+					<div class="carousel-cell" ng-class="{fade: foam}">
+						<h3>Chair / wood</h3>
+						<img src="/img/chair7.jpg">
+					</div>
+					<div class="carousel-cell" ng-class="{fade: chairs}">
+						<h3>Chair / wood</h3>
+						<img src="/img/chair8.jpg">
+					</div> -->
+				</div>
+
+				<h2>Best of 2016</h2>
+
 				<div class="main-carousel" data-flickity='{ "cellAlign": "left", "groupCells": 4, "prevNextButtons": false}'>
-					<div class="carousel-cell">1</div>
-					<div class="carousel-cell">2</div>
-					<div class="carousel-cell">3</div>
-					<div class="carousel-cell">4</div>
-					<div class="carousel-cell">5</div>
-					<div class="carousel-cell">6</div>
-					<div class="carousel-cell">7</div>
-					<div class="carousel-cell">8</div>
+					<div class="carousel-cell"><img src="/img/chair5.jpg"></div>
+					<div class="carousel-cell"><img src="/img/chair6.jpg"></div>
+					<div class="carousel-cell"><img src="/img/chair7.jpg"></div>
+					<div class="carousel-cell"><img src="/img/chair8.jpg"></div>
+					<div class="carousel-cell"><img src="/img/chair1.jpg"></div>
+					<div class="carousel-cell"><img src="/img/chair2.jpg"></div>
+					<div class="carousel-cell"><img src="/img/chair3.jpg"></div>
+					<div class="carousel-cell"><img src="/img/chair4.jpg"></div>
 				</div>
 			</div>
 		</div>
@@ -78,7 +119,21 @@
 		<!-- <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
 		<script>window.jQuery || document.write('<script src="js/vendor/jquery-3.1.1.min.js"><\/script>')</script> -->
 		<script src="/flickity/dist/flickity.pkgd.min.js"></script>
+		<script src="/angular/angular.min.js"></script>
 		<script src="js/main.js"></script>
+
+		<!-- <script>
+			var carousel = document.querySelector('.carousel');
+			var flkty = new Flickity( carousel );
+
+			var showButton = document.querySelector('.button--show');
+			showButton.addEventListener( 'click', function() {
+				// un-hide carousel
+				// carousel.style.display = 'block';
+				// Flickity resize
+				flkty.resize();
+			});
+		</script> -->
 
 		<!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
 		<script>
