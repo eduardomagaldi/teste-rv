@@ -18,7 +18,7 @@ var gulp = require('gulp')
 gulp.task('css', function () {
 	return gulp.src('./src/css/main.styl')
 		.pipe(stylus())
-		.pipe(gulp.dest('./public/css/'));
+		.pipe(gulp.dest('./css/'));
 });
 
 gulp.task('watch', function () {
@@ -28,7 +28,7 @@ gulp.task('watch', function () {
 gulp.task('webserver', function () {
 	connect.server({
 		name: 'app',
-		root: ['public', 'node_modules'],
+		root: ['./'],
 		port: 8000,
 		livereload: true
 	});
