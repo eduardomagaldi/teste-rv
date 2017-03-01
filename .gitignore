@@ -1,2 +1,5 @@
 .DS_Store
 node_modules
+!node_modules/flickity/dist/flickity.css 
+!node_modules/flickity/dist/flickity.pkgd.min.js 
+!node_modules/angular/angular.min.js
