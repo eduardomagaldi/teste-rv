@@ -124,31 +124,16 @@
 			</div>
 		</div>
 
-		<!-- <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
-		<script>window.jQuery || document.write('<script src="js/vendor/jquery-3.1.1.min.js"><\/script>')</script> -->
-		<script src="./vendor/flickity/dist/flickity.pkgd.min.js"></script>
+		<script src="/node_modules/flickity/dist/flickity.pkgd.min.js"></script>
 		
 		<script src="/node_modules/angular/angular.min.js"></script>
 		<script src="/node_modules/angular-animate/angular-animate.min.js"></script>
 		<script src="/node_modules/angular-aria/angular-aria.min.js"></script>
 		<script src="/node_modules/angular-material/angular-material.min.js"></script>
-		<!-- <script src="js/main.js"></script> -->
 
 		<script>
-			var myApp = angular.module('myApp', ['ngMaterial', 'ngAnimate', 'ngAria']);
+			var myApp = angular.module('myApp', ['ngAnimate', 'ngAria', 'ngMaterial']);
 		</script>
-		<!-- <script>
-			var carousel = document.querySelector('.carousel');
-			var flkty = new Flickity( carousel );
-
-			var showButton = document.querySelector('.button--show');
-			showButton.addEventListener( 'click', function() {
-				// un-hide carousel
-				// carousel.style.display = 'block';
-				// Flickity resize
-				flkty.resize();
-			});
-		</script> -->
 
 		<!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
 		<script>
