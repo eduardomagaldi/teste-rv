@@ -16,28 +16,29 @@
   font-weight: normal;
   font-style: normal;
 }
+html,
 body {
   font-family: 'Rubik';
-  background-color: #f7f7f7;
+  background: #f7f7f7;
 }
 .pull-right {
   float: right;
 }
 .fade {
-  opacity: 0.3;
+  opacity: 0.2;
 }
 .wrapper {
   width: 100%;
   margin: 0 auto 30px auto;
-  padding: 0 40px;
   box-sizing: border-box;
+  max-width: 1600px;
 }
 .wrapper.hero-wrapper {
   background-color: #92b8ad;
   padding: 0;
 }
 .wrapper.content-wrapper {
-  padding: 0 130px;
+  max-width: 1190px;
 }
 .logo {
   width: 60px;
@@ -116,16 +117,40 @@ body {
   display: inline-block;
   font-size: 16px;
   margin-left: 50px;
+  text-transform: uppercase;
+  margin-right: 30px;
 }
 .secondaryTitle:first-child {
   margin-left: 0;
 }
 .carousel-cell {
   background: #fff;
-  width: 289px;
+  width: 290px;
   height: 408px;
   margin-right: 10px;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+  padding: 20px;
+  text-align: center;
+  box-sizing: border-box;
 }
 .carousel-cell:last-child {
   margin-right: 0;
+}
+.carousel-title {
+  font-size: 12px;
+  color: #cfcfcf;
+  text-transform: uppercase;
+  text-align: left;
+}
+.md-label {
+  text-transform: uppercase;
+  color: #666;
+  line-height: 2;
+}
+md-checkbox .md-container {
+  top: 46%;
+}
+md-checkbox .md-icon {
+  border-color: #dfdfdf;
 }

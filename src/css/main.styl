@@ -2,6 +2,7 @@
 
 //measurements
 wrapperMaxWidth = 1600px;
+contentWrapperMaxWidth = 1190px;
 contentPadding = 0 40px;
 mainFontSize = 19px;
 buttonFontSize = 14px;
@@ -13,29 +14,34 @@ heroBgColor = #92b8ad;
 mainHighlightColor = #542d4c;
 lightestColor = #fff;
 bgContentColor = #f7f7f7;
+discreetColor = #cfcfcf;
+secDescreetColor = #dfdfdf;
+textColor = #666666;
 
+html,
 body
 	font-family: 'Rubik';
-	background-color: bgContentColor;
+	background: bgContentColor;
 	
 .pull-right
 	float: right;
 	
 .fade
-	opacity: .3;
+	opacity: .2;
 
 .wrapper
 	width: 100%;
 	margin: 0 auto 30px auto;
-	padding: contentPadding;
+	// padding: contentPadding;
 	box-sizing: border-box;
+	max-width: wrapperMaxWidth;
 	
 	&.hero-wrapper
 		background-color: heroBgColor;
 		padding: 0;
 	
 	&.content-wrapper
-		padding: 0 130px;
+		max-width: contentWrapperMaxWidth;
 	
 .logo
 	width: 60px;
@@ -115,15 +121,40 @@ body
 	display: inline-block;
 	font-size: secondaryTitleFontSize;
 	margin-left: 50px;
+	text-transform: uppercase;
+	margin-right: 30px;
 	
 	&:first-child
 		margin-left: 0;
 		
 .carousel-cell
 	background: white;
-	width: 289px;
+	width: 290px;
 	height: 408px;
 	margin-right: 10px;
+	-webkit-transition: opacity .3s;
+	transition: opacity .3s;
+	padding: 20px;
+	text-align: center;
+	box-sizing: border-box;
 	
 	&:last-child
 		margin-right: 0;
+		
+.carousel-title
+	font-size: 12px;
+	color: discreetColor;
+	text-transform: uppercase;
+	text-align: left;
+	
+.md-label
+	text-transform: uppercase;
+	color: textColor;
+	line-height: 2;
+	
+md-checkbox
+	.md-container
+		top: 46%;
+		
+	.md-icon
+		border-color: secDescreetColor;

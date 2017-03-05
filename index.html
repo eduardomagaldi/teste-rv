@@ -8,9 +8,9 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 
 		<link rel="stylesheet" href="./css/normalize.css">
-		<link rel="stylesheet" href="./css/main.css">
 		<link rel="stylesheet" href="./vendor/flickity/dist/flickity.min.css" media="screen">
 		<link rel="stylesheet" href="/node_modules/angular-material/angular-material.min.css" media="screen">
+		<link rel="stylesheet" href="./css/main.css">
 	</head>
 	<body>
 		<!--[if lte IE 9]>
@@ -43,68 +43,70 @@
 
 		<div class="wrapper content-wrapper" ng-app="myApp">
 
-			<md-checkbox ng-model="data.cb1" aria-label="Checkbox 1">
-				            Checkbox 1
-				</md-checkbox>
+			
 
 
 			<div class="controls-wrapper">
 				<h2 class="secondaryTitle">Type:</h2>
 
-				<input type="checkbox" name="armchairs" ng-model="armchairs">
+				<!-- <input type="checkbox" name="armchairs" ng-model="armchairs"> -->
+				<md-checkbox ng-model="armchairs">
+					armchairs
+				</md-checkbox>
 				
-				<label for="armchairs">armchairs</label>
+				<!-- <label for="armchairs">armchairs</label> -->
 
-				<input type="checkbox" name="chairs" ng-model="chairs">
-				<label for="chairs">chairs</label>
+				<md-checkbox ng-model="chairs">
+					chairs
+				</md-checkbox>
 
 				<h2 class="secondaryTitle">Material:</h2>
 
-				<input type="checkbox" name="wood" ng-model="wood">
-				<label for="wood">wood</label>
+				<md-checkbox ng-model="wood">
+					wood
+				</md-checkbox>
 
-				<input type="checkbox" name="foam" ng-model="foam">
-				<label for="foam">foam</label>
+				<md-checkbox ng-model="foam">
+					foam
+				</md-checkbox>
 
 				<a class="btn pull-right">See all products</a>
 
 				<hr />
 
 				<h2>New armchairs</h2>
-				<!--  -->
-				<a class="button--show">show</a>
 
 				<div class="main-carousel carousel" data-flickity='{ "cellAlign": "left", "groupCells": 4, "prevNextButtons": false}'>
 					<div class="carousel-cell" ng-class="{fade: !wood && !armchairs}">
-						<h3>Armchair / wood</h3>
+						<h3 class="carousel-title">Armchair / wood</h3>
 						<img src="./img/chair1.jpg">
 					</div>
 					<div class="carousel-cell" ng-class="{fade: !foam && !armchairs}">
-						<h3>Armchair / foam</h3>
+						<h3 class="carousel-title">Armchair / foam</h3>
 						<img src="./img/chair2.jpg">
 					</div>
 					<div class="carousel-cell" ng-class="{fade: !foam && !armchairs}">
-						<h3>Armchair / foam</h3>
+						<h3 class="carousel-title">Armchair / foam</h3>
 						<img src="./img/chair3.jpg">
 					</div>
 					<div class="carousel-cell" ng-class="{fade: !wood && !armchairs}">
-						<h3>Armchair / wood</h3>
+						<h3 class="carousel-title">Armchair / wood</h3>
 						<img src="./img/chair4.jpg">
 					</div>
 					<div class="carousel-cell" ng-class="{fade: !wood && !chairs}">
-						<h3>Chair / wood</h3>
+						<h3 class="carousel-title">Chair / wood</h3>
 						<img src="./img/chair5.jpg">
 					</div>
 					<div class="carousel-cell" ng-class="{fade: !foam && !chairs}">
-						<h3>Chair / foam</h3>
+						<h3 class="carousel-title">Chair / foam</h3>
 						<img src="./img/chair6.jpg">
 					</div>
 					<div class="carousel-cell" ng-class="{fade: !wood && !chairs}">
-						<h3>Chair / wood</h3>
+						<h3 class="carousel-title">Chair / wood</h3>
 						<img src="./img/chair7.jpg">
 					</div>
 					<div class="carousel-cell" ng-class="{fade: !wood && !chairs}">
-						<h3>Chair / wood</h3>
+						<h3 class="carousel-title">Chair / wood</h3>
 						<img src="./img/chair8.jpg">
 					</div>
 				</div>
@@ -132,7 +134,36 @@
 		<script src="/node_modules/angular-material/angular-material.min.js"></script>
 
 		<script>
-			var myApp = angular.module('myApp', ['ngAnimate', 'ngAria', 'ngMaterial']);
+			var myApp = angular.module(
+					'myApp', 
+					['ngAnimate', 'ngAria', 'ngMaterial']
+				).config(function($mdThemingProvider) {
+					$mdThemingProvider.definePalette('amazingPaletteName', {
+						'50': '70d6b8',
+						'100': '70d6b8',
+						'200': '70d6b8',
+						'300': '70d6b8',
+						'400': '70d6b8',
+						'500': '70d6b8',
+						'600': '70d6b8',
+						'700': '70d6b8',
+						'800': '70d6b8',
+						'900': '70d6b8',
+						'A100': '70d6b8',
+						'A200': '70d6b8',
+						'A400': '70d6b8',
+						'A700': '70d6b8',
+						'contrastDefaultColor': 'light',    
+						'contrastDarkColors': ['50', '100', '200', '300', '400', 'A100'],
+						'contrastLightColors': undefined
+					});
+
+					$mdThemingProvider.theme('default')
+						.primaryPalette('amazingPaletteName')
+						.accentPalette('amazingPaletteName')
+						.warnPalette('amazingPaletteName')
+						.backgroundPalette('amazingPaletteName');
+				});
 		</script>
 
 		<!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
