@@ -1,19 +1,21 @@
 var gulp = require('gulp')
-	// ejs = require('gulp-ejs'),
 	stylus = require('gulp-stylus'),
 	connect = require('gulp-connect');
 
-// gulp.task('ejs', function() {
-// 	gulp.src(['./src/templates/views/**/*.ejs', './src/templates/*.ejs'])
-// 		.pipe(ejs({
-// 				msg: 'Hello Gulp 2!'
-// 			},
-// 			{
-// 				ext: '.html'
-// 			})
-// 		)
-// 		.pipe(gulp.dest('./public'));
-// });
+gulp.task('copy', function() {
+	gulp.src([
+		'./node_modules/flickity/dist/flickity.min.css',
+		'./node_modules/angular-material/angular-material.min.css',
+
+		'./node_modules/flickity/dist/flickity.pkgd.min.js',
+
+		'./node_modules/angular/angular.min.js',
+		'./node_modules/angular-animate/angular-animate.min.js',
+		'./node_modules/angular-aria/angular-aria.min.js',
+		'./node_modules/angular-material/angular-material.min.js'
+	])
+	.pipe(gulp.dest('./vendor/'));
+});
 
 gulp.task('css', function () {
 	return gulp.src('./src/css/main.styl')
@@ -35,5 +37,4 @@ gulp.task('webserver', function () {
 });
 
 gulp.task('process', ['css']);
-gulp.task('default', ['process', 'watch', 'webserver']);
-// gulp.task('default', ['webserver']);
+gulp.task('default', ['process', 'copy', 'watch', 'webserver']);
