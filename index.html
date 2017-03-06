@@ -24,10 +24,10 @@
 
 					<nav class="nav">
 						<ul>
-							<li><a href="#">Home</a></li>
-							<li><a href="#">Products</a></li>
-							<li><a href="#">Contact</a></li>
-							<li><a href="#"><img class="icon" src="./img/cart.svg" alt="Cart"></a></li>
+							<li><a class="hvr-pop" href="#">Home</a></li>
+							<li><a class="hvr-pop" href="#">Products</a></li>
+							<li><a class="hvr-pop" href="#">Contact</a></li>
+							<li><a class="hvr-pop" href="#"><img class="icon" src="./img/cart.svg" alt="Cart"></a></li>
 						</ul>
 					</nav>
 				</header>
@@ -36,92 +36,219 @@
 				<div class="half">
 					<h1 class="main-title">Collection 2016</h1>
 					<p class="main-paragraph">Some cool text here about the new collection of design furniture 2016</p>
-					<a href="#" class="btn">Buy now</a>
+					<a href="#" class="btn hvr-pop">Buy now</a>
 				</div>
 			</div>
 		</div>
 
 		<div class="wrapper content-wrapper" ng-app="myApp">
-
-			
-
-
-			<div class="controls-wrapper">
+			<div class="controls-wrapper"> <!-- ng-controller="FilterController" -->
 				<h2 class="secondaryTitle">Type:</h2>
 
 				<!-- <input type="checkbox" name="armchairs" ng-model="armchairs"> -->
-				<md-checkbox ng-model="armchairs">
+				<md-checkbox ng-init="armchairs = true" ng-model="armchairs">
 					armchairs
 				</md-checkbox>
 				
 				<!-- <label for="armchairs">armchairs</label> -->
 
-				<md-checkbox ng-model="chairs">
+				<md-checkbox ng-init="chairs = true" ng-model="chairs">
 					chairs
 				</md-checkbox>
 
 				<h2 class="secondaryTitle">Material:</h2>
 
-				<md-checkbox ng-model="wood">
+				<md-checkbox ng-init="wood = true" ng-model="wood">
 					wood
 				</md-checkbox>
 
-				<md-checkbox ng-model="foam">
+				<md-checkbox ng-init="foam = true" ng-model="foam">
 					foam
 				</md-checkbox>
 
-				<a class="btn pull-right">See all products</a>
+				<a class="btn sec pointer pull-right hvr-pop" ng-click="wood = true; foam = true; chairs = true; armchairs = true;">See all products</a>
 
 				<hr />
 
-				<h2>New armchairs</h2>
+				<h3 class="tertiaryTitle first">New armchairs</h3>
 
-				<div class="main-carousel carousel" data-flickity='{ "cellAlign": "left", "groupCells": 4, "prevNextButtons": false}'>
+				<div class="main-carousel carousel" data-flickity='
+					{ 	
+						"cellAlign": "left",
+						"groupCells": 4, 
+						"prevNextButtons": false
+					}
+					'>
 					<div class="carousel-cell" ng-class="{fade: !wood && !armchairs}">
 						<h3 class="carousel-title">Armchair / wood</h3>
 						<img src="./img/chair1.jpg">
+						<h4 class="carousel-description">Modern Black Armchair</h4>
+						<h5 class="carousel-price">$ 350.00</h5>
+						<a href="#" class="btn sec carousel-btn hvr-pop">
+							<img alt="" src="./img/cart-white.svg" class="icon">
+							Buy Now
+						</a>
 					</div>
 					<div class="carousel-cell" ng-class="{fade: !foam && !armchairs}">
 						<h3 class="carousel-title">Armchair / foam</h3>
 						<img src="./img/chair2.jpg">
+						<h4 class="carousel-description">Modern Gray Armchair</h4>
+						<h5 class="carousel-price">$ 350.00</h5>
+						<a href="#" class="btn sec carousel-btn hvr-pop">
+							<img alt="" src="./img/cart-white.svg" class="icon">
+							Buy Now
+						</a>
 					</div>
 					<div class="carousel-cell" ng-class="{fade: !foam && !armchairs}">
 						<h3 class="carousel-title">Armchair / foam</h3>
 						<img src="./img/chair3.jpg">
+						<h4 class="carousel-description">Light Blue Armchair</h4>
+						<h5 class="carousel-price">$ 350.00</h5>
+						<a href="#" class="btn sec carousel-btn hvr-pop">
+							<img alt="" src="./img/cart-white.svg" class="icon">
+							Buy Now
+						</a>
 					</div>
 					<div class="carousel-cell" ng-class="{fade: !wood && !armchairs}">
 						<h3 class="carousel-title">Armchair / wood</h3>
 						<img src="./img/chair4.jpg">
+						<h4 class="carousel-description">Black and Wood Armchair</h4>
+						<h5 class="carousel-price">$ 350.00</h5>
+						<a href="#" class="btn sec carousel-btn hvr-pop">
+							<img alt="" src="./img/cart-white.svg" class="icon">
+							Buy Now
+						</a>
 					</div>
 					<div class="carousel-cell" ng-class="{fade: !wood && !chairs}">
 						<h3 class="carousel-title">Chair / wood</h3>
 						<img src="./img/chair5.jpg">
+						<h4 class="carousel-description">Wood Design Chair</h4>
+						<h5 class="carousel-price">$ 350.00</h5>
+						<a href="#" class="btn sec carousel-btn hvr-pop">
+							<img alt="" src="./img/cart-white.svg" class="icon">
+							Buy Now
+						</a>
 					</div>
 					<div class="carousel-cell" ng-class="{fade: !foam && !chairs}">
 						<h3 class="carousel-title">Chair / foam</h3>
 						<img src="./img/chair6.jpg">
+						<h4 class="carousel-description">Wood Premium Chair</h4>
+						<h5 class="carousel-price">$ 350.00</h5>
+						<a href="#" class="btn sec carousel-btn hvr-pop">
+							<img alt="" src="./img/cart-white.svg" class="icon">
+							Buy Now
+						</a>
 					</div>
 					<div class="carousel-cell" ng-class="{fade: !wood && !chairs}">
 						<h3 class="carousel-title">Chair / wood</h3>
 						<img src="./img/chair7.jpg">
+						<h4 class="carousel-description">White and Wood Chair</h4>
+						<h5 class="carousel-price">$ 350.00</h5>
+						<a href="#" class="btn sec carousel-btn hvr-pop">
+							<img alt="" src="./img/cart-white.svg" class="icon">
+							Buy Now
+						</a>
 					</div>
 					<div class="carousel-cell" ng-class="{fade: !wood && !chairs}">
 						<h3 class="carousel-title">Chair / wood</h3>
 						<img src="./img/chair8.jpg">
+						<h4 class="carousel-description">Black and Wood Chair</h4>
+						<h5 class="carousel-price">$ 350.00</h5>
+						<a href="#" class="btn sec carousel-btn hvr-pop">
+							<img alt="" src="./img/cart-white.svg" class="icon">
+							Buy Now
+						</a>
 					</div>
 				</div>
 
-				<h2>Best of 2016</h2>
+				<h3 class="tertiaryTitle">Best of 2016</h3>
 
-				<div class="main-carousel" data-flickity='{ "cellAlign": "left", "groupCells": 4, "prevNextButtons": false}'>
-					<div class="carousel-cell"><img src="./img/chair5.jpg"></div>
-					<div class="carousel-cell"><img src="./img/chair6.jpg"></div>
-					<div class="carousel-cell"><img src="./img/chair7.jpg"></div>
-					<div class="carousel-cell"><img src="./img/chair8.jpg"></div>
-					<div class="carousel-cell"><img src="./img/chair1.jpg"></div>
-					<div class="carousel-cell"><img src="./img/chair2.jpg"></div>
-					<div class="carousel-cell"><img src="./img/chair3.jpg"></div>
-					<div class="carousel-cell"><img src="./img/chair4.jpg"></div>
+				<div class="main-carousel" data-flickity='{
+						"cellAlign": "left",
+						"groupCells": 4,
+						"prevNextButtons": false
+					}'>
+					<div class="carousel-cell" ng-class="{fade: !wood && !chairs}">
+						<h3 class="carousel-title">Chair / wood</h3>
+						<img src="./img/chair5.jpg">
+						<h4 class="carousel-description">Wood Design Chair</h4>
+						<h5 class="carousel-price">$ 350.00</h5>
+						<a href="#" class="btn sec carousel-btn hvr-pop">
+							<img alt="" src="./img/cart-white.svg" class="icon">
+							Buy Now
+						</a>
+					</div>
+					<div class="carousel-cell" ng-class="{fade: !foam && !chairs}">
+						<h3 class="carousel-title">Chair / foam</h3>
+						<img src="./img/chair6.jpg">
+						<h4 class="carousel-description">Wood Premium Chair</h4>
+						<h5 class="carousel-price">$ 350.00</h5>
+						<a href="#" class="btn sec carousel-btn hvr-pop">
+							<img alt="" src="./img/cart-white.svg" class="icon">
+							Buy Now
+						</a>
+					</div>
+					<div class="carousel-cell" ng-class="{fade: !wood && !chairs}">
+						<h3 class="carousel-title">Chair / wood</h3>
+						<img src="./img/chair7.jpg">
+						<h4 class="carousel-description">White and Wood Chair</h4>
+						<h5 class="carousel-price">$ 350.00</h5>
+						<a href="#" class="btn sec carousel-btn hvr-pop">
+							<img alt="" src="./img/cart-white.svg" class="icon">
+							Buy Now
+						</a>
+					</div>
+					<div class="carousel-cell" ng-class="{fade: !wood && !chairs}">
+						<h3 class="carousel-title">Chair / wood</h3>
+						<img src="./img/chair8.jpg">
+						<h4 class="carousel-description">Black and Wood Chair</h4>
+						<h5 class="carousel-price">$ 350.00</h5>
+						<a href="#" class="btn sec carousel-btn hvr-pop">
+							<img alt="" src="./img/cart-white.svg" class="icon">
+							Buy Now
+						</a>
+					</div>
+
+					<div class="carousel-cell" ng-class="{fade: !wood && !armchairs}">
+						<h3 class="carousel-title">Armchair / wood</h3>
+						<img src="./img/chair1.jpg">
+						<h4 class="carousel-description">Modern Black Armchair</h4>
+						<h5 class="carousel-price">$ 350.00</h5>
+						<a href="#" class="btn sec carousel-btn hvr-pop">
+							<img alt="" src="./img/cart-white.svg" class="icon">
+							Buy Now
+						</a>
+					</div>
+					<div class="carousel-cell" ng-class="{fade: !foam && !armchairs}">
+						<h3 class="carousel-title">Armchair / foam</h3>
+						<img src="./img/chair2.jpg">
+						<h4 class="carousel-description">Modern Gray Armchair</h4>
+						<h5 class="carousel-price">$ 350.00</h5>
+						<a href="#" class="btn sec carousel-btn hvr-pop">
+							<img alt="" src="./img/cart-white.svg" class="icon">
+							Buy Now
+						</a>
+					</div>
+					<div class="carousel-cell" ng-class="{fade: !foam && !armchairs}">
+						<h3 class="carousel-title">Armchair / foam</h3>
+						<img src="./img/chair3.jpg">
+						<h4 class="carousel-description">Light Blue Armchair</h4>
+						<h5 class="carousel-price">$ 350.00</h5>
+						<a href="#" class="btn sec carousel-btn hvr-pop">
+							<img alt="" src="./img/cart-white.svg" class="icon">
+							Buy Now
+						</a>
+					</div>
+					<div class="carousel-cell" ng-class="{fade: !wood && !armchairs}">
+						<h3 class="carousel-title">Armchair / wood</h3>
+						<img src="./img/chair4.jpg">
+						<h4 class="carousel-description">Black and Wood Armchair</h4>
+						<h5 class="carousel-price">$ 350.00</h5>
+						<a href="#" class="btn sec carousel-btn hvr-pop">
+							<img alt="" src="./img/cart-white.svg" class="icon">
+							Buy Now
+						</a>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -134,35 +261,89 @@
 		<script src="/node_modules/angular-material/angular-material.min.js"></script>
 
 		<script>
+
+
+
+
+
+
+
+			// angular.
+			// module('myServiceModule', []).
+			//  controller('MyController', ['$scope', 'notify', function($scope, notify) {
+			//    $scope.callNotify = function(msg) {
+			//      notify(msg);
+			//    };
+			//  }]).
+			// factory('notify', ['$window', function(win) {
+			//    var msgs = [];
+			//    return function(msg) {
+			//      msgs.push(msg);
+			//      if (msgs.length === 3) {
+			//        win.alert(msgs.join('\n'));
+			//        msgs = [];
+			//      }
+			//    };
+			//  }]);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 			var myApp = angular.module(
 					'myApp', 
 					['ngAnimate', 'ngAria', 'ngMaterial']
-				).config(function($mdThemingProvider) {
+				)
+
+				// .controller('FilterController', ['$scope', 'seeAll', function($scope, seeAll) {
+				// 	$scope.seeAll = function() {
+				// 		seeAll();
+				// 	};
+				// }])
+				// .factory('seeAll', ['$scope', function($scope) {
+				// 	return function() {
+				// 		console.log('bla');
+				// 		$scope.wood = true;
+				// 	}
+				// }])
+				.config(function($mdThemingProvider) {
 					$mdThemingProvider.definePalette('amazingPaletteName', {
-						'50': '70d6b8',
-						'100': '70d6b8',
-						'200': '70d6b8',
-						'300': '70d6b8',
-						'400': '70d6b8',
-						'500': '70d6b8',
-						'600': '70d6b8',
-						'700': '70d6b8',
-						'800': '70d6b8',
-						'900': '70d6b8',
-						'A100': '70d6b8',
-						'A200': '70d6b8',
-						'A400': '70d6b8',
-						'A700': '70d6b8',
+						'50': '5eb098',
+						'100': '5eb098',
+						'200': '5eb098',
+						'300': '5eb098',
+						'400': '5eb098',
+						'500': '5eb098',
+						'600': '5eb098',
+						'700': '5eb098',
+						'800': '5eb098',
+						'900': '5eb098',
+						'A100': '5eb098',
+						'A200': '5eb098',
+						'A400': '5eb098',
+						'A700': '5eb098',
 						'contrastDefaultColor': 'light',    
 						'contrastDarkColors': ['50', '100', '200', '300', '400', 'A100'],
 						'contrastLightColors': undefined
 					});
 
 					$mdThemingProvider.theme('default')
-						.primaryPalette('amazingPaletteName')
-						.accentPalette('amazingPaletteName')
-						.warnPalette('amazingPaletteName')
-						.backgroundPalette('amazingPaletteName');
+						.accentPalette('amazingPaletteName');
 				});
 		</script>
 

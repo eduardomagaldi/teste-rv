@@ -7,27 +7,39 @@ contentPadding = 0 40px;
 mainFontSize = 19px;
 buttonFontSize = 14px;
 secondaryTitleFontSize = 16px;
+priceFontSize = 18px;
+tertiaryTitleFontSize = 20px;
 mainTitleFontSize = 60px;
 
 //colors
 heroBgColor = #92b8ad;
 mainHighlightColor = #542d4c;
+secHighlightColor = #5eb098;
 lightestColor = #fff;
+darkestColor = #000;
 bgContentColor = #f7f7f7;
 discreetColor = #cfcfcf;
 secDescreetColor = #dfdfdf;
 textColor = #666666;
+controlColor = #cdcdcd;
 
 html,
 body
 	font-family: 'Rubik';
 	background: bgContentColor;
-	
+
+//common classes
+
 .pull-right
 	float: right;
 	
 .fade
 	opacity: .2;
+	
+.pointer
+	cursor: pointer;
+
+//specific css
 
 .wrapper
 	width: 100%;
@@ -117,6 +129,9 @@ body
 	font-size: buttonFontSize;
 	text-transform: uppercase;
 	
+	&.sec
+		background-color: secHighlightColor;
+	
 .secondaryTitle
 	display: inline-block;
 	font-size: secondaryTitleFontSize;
@@ -127,13 +142,24 @@ body
 	&:first-child
 		margin-left: 0;
 		
+.tertiaryTitle
+	font-size: tertiaryTitleFontSize;
+	text-align: center;
+	text-transform: uppercase;
+	font-weight: normal;
+	margin-top: 135px;
+	margin-bottom: 50px;
+	color: textColor;
+		
+//flickity
+		
 .carousel-cell
 	background: white;
 	width: 290px;
 	height: 408px;
 	margin-right: 10px;
-	-webkit-transition: opacity .3s;
-	transition: opacity .3s;
+	-webkit-transition: opacity .3s, box-shadow .7s;
+	transition: opacity .3s, box-shadow .7s;
 	padding: 20px;
 	text-align: center;
 	box-sizing: border-box;
@@ -141,11 +167,74 @@ body
 	&:last-child
 		margin-right: 0;
 		
+	&:hover
+		box-shadow: 0 15px 40px #cdcdcd;
+
+		.carousel-btn
+			opacity: 1;		
+
 .carousel-title
 	font-size: 12px;
 	color: discreetColor;
 	text-transform: uppercase;
 	text-align: left;
+	margin: 0;
+	
+.carousel-description
+	color: textColor;
+	font-size: secondaryTitleFontSize;
+	font-weight: normal;
+	margin: 10px 0 10px;
+	
+.carousel-price
+	color: darkestColor;
+	font-size: priceFontSize;
+	margin: 0;
+	font-weight: normal;
+	
+.carousel-btn
+	padding: 7px 30px;
+	margin-top: 16px;
+	opacity: 0;
+	-webkit-transition: opacity .7s;
+	transition: opacity .7s;
+
+	.icon
+		width: 27px;
+		vertical-align: middle;
+		margin-right: 15px;
+	
+.flickity-page-dots
+	dimensions = 14px;
+	
+	bottom: -45px;
+
+	.dot
+		width: dimensions;
+		height: dimensions;
+		border: 2px solid bgContentColor;
+		-webkit-transition: border .7s;
+		transition: border .7s;
+		
+		&.is-selected
+			background: lightestColor;
+			border-color: controlColor;
+
+.flickity-viewport
+	padding: 10px 0 30px;
+
+
+
+
+
+
+
+
+
+
+
+
+//angular material
 	
 .md-label
 	text-transform: uppercase;
@@ -158,3 +247,38 @@ md-checkbox
 		
 	.md-icon
 		border-color: secDescreetColor;
+		
+//////////////	
+//animations//
+//////////////
+/* Pop */
+@-webkit-keyframes hvr-pop {
+	50% {
+		-webkit-transform: scale(1.2);
+		transform: scale(1.2);
+	}
+}
+@keyframes hvr-pop {
+	50% {
+		-webkit-transform: scale(1.2);
+		transform: scale(1.2);
+	}
+}
+.hvr-pop
+	display: inline-block;
+	vertical-align: middle;
+	-webkit-transform: perspective(1px) translateZ(0);
+	transform: perspective(1px) translateZ(0);
+	box-shadow: 0 0 1px transparent;
+
+.hvr-pop:hover,
+.hvr-pop:focus,
+.hvr-pop:active
+	-webkit-animation-name: hvr-pop;
+	animation-name: hvr-pop;
+	-webkit-animation-duration: 0.3s;
+	animation-duration: 0.3s;
+	-webkit-animation-timing-function: linear;
+	animation-timing-function: linear;
+	-webkit-animation-iteration-count: 1;
+	animation-iteration-count: 1;

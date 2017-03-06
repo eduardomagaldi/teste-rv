@@ -27,6 +27,9 @@ body {
 .fade {
   opacity: 0.2;
 }
+.pointer {
+  cursor: pointer;
+}
 .wrapper {
   width: 100%;
   margin: 0 auto 30px auto;
@@ -113,6 +116,9 @@ body {
   font-size: 14px;
   text-transform: uppercase;
 }
+.btn.sec {
+  background-color: #5eb098;
+}
 .secondaryTitle {
   display: inline-block;
   font-size: 16px;
@@ -123,13 +129,22 @@ body {
 .secondaryTitle:first-child {
   margin-left: 0;
 }
+.tertiaryTitle {
+  font-size: 20px;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: normal;
+  margin-top: 135px;
+  margin-bottom: 50px;
+  color: #666;
+}
 .carousel-cell {
   background: #fff;
   width: 290px;
   height: 408px;
   margin-right: 10px;
-  -webkit-transition: opacity 0.3s;
-  transition: opacity 0.3s;
+  -webkit-transition: opacity 0.3s, box-shadow 0.7s;
+  transition: opacity 0.3s, box-shadow 0.7s;
   padding: 20px;
   text-align: center;
   box-sizing: border-box;
@@ -137,11 +152,59 @@ body {
 .carousel-cell:last-child {
   margin-right: 0;
 }
+.carousel-cell:hover {
+  box-shadow: 0 15px 40px #cdcdcd;
+}
+.carousel-cell:hover .carousel-btn {
+  opacity: 1;
+}
 .carousel-title {
   font-size: 12px;
   color: #cfcfcf;
   text-transform: uppercase;
   text-align: left;
+  margin: 0;
+}
+.carousel-description {
+  color: #666;
+  font-size: 16px;
+  font-weight: normal;
+  margin: 10px 0 10px;
+}
+.carousel-price {
+  color: #000;
+  font-size: 18px;
+  margin: 0;
+  font-weight: normal;
+}
+.carousel-btn {
+  padding: 7px 30px;
+  margin-top: 16px;
+  opacity: 0;
+  -webkit-transition: opacity 0.7s;
+  transition: opacity 0.7s;
+}
+.carousel-btn .icon {
+  width: 27px;
+  vertical-align: middle;
+  margin-right: 15px;
+}
+.flickity-page-dots {
+  bottom: -45px;
+}
+.flickity-page-dots .dot {
+  width: 14px;
+  height: 14px;
+  border: 2px solid #f7f7f7;
+  -webkit-transition: border 0.7s;
+  transition: border 0.7s;
+}
+.flickity-page-dots .dot.is-selected {
+  background: #fff;
+  border-color: #cdcdcd;
+}
+.flickity-viewport {
+  padding: 10px 0 30px;
 }
 .md-label {
   text-transform: uppercase;
@@ -153,4 +216,54 @@ md-checkbox .md-container {
 }
 md-checkbox .md-icon {
   border-color: #dfdfdf;
+}
+/* Pop */
+@-webkit-keyframes hvr-pop {
+  50% {
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+  }
+}
+.hvr-pop {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px transparent;
+}
+.hvr-pop:hover,
+.hvr-pop:focus,
+.hvr-pop:active {
+  -webkit-animation-name: hvr-pop;
+  animation-name: hvr-pop;
+  -webkit-animation-duration: 0.3s;
+  animation-duration: 0.3s;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+}
+@-moz-keyframes hvr-pop {
+  50% {
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+  }
+}
+@-webkit-keyframes hvr-pop {
+  50% {
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+  }
+}
+@-o-keyframes hvr-pop {
+  50% {
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+  }
+}
+@keyframes hvr-pop {
+  50% {
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+  }
 }
