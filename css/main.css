@@ -34,11 +34,14 @@ body {
   width: 100%;
   margin: 0 auto 30px auto;
   box-sizing: border-box;
-  max-width: 1600px;
+  max-width: 1275px;
 }
 .wrapper.hero-wrapper {
+  background: url("../img/hero.jpg") no-repeat;
   background-color: #92b8ad;
+  background-position: center top;
   padding: 0;
+  max-width: none;
 }
 .wrapper.content-wrapper {
   max-width: 1190px;
@@ -52,15 +55,15 @@ body {
   margin-bottom: 30px;
 }
 .hero {
-  background: url("../img/hero.jpg") no-repeat;
   height: 768px;
-  width: 100%;
+  max-width: 1275px;
   background-position: center top;
   box-sizing: border-box;
   background-size: cover;
   overflow: hidden;
   font-size: 0;
   padding: 0 40px;
+  margin: 0 auto;
   display: flex;
   flex-flow: row wrap;
 }

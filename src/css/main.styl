@@ -1,7 +1,7 @@
 @import fonts;
 
 //measurements
-wrapperMaxWidth = 1600px;
+wrapperMaxWidth = 1275px;
 contentWrapperMaxWidth = 1190px;
 contentPadding = 0 40px;
 mainFontSize = 19px;
@@ -49,8 +49,11 @@ body
 	max-width: wrapperMaxWidth;
 	
 	&.hero-wrapper
+		background: url('../img/hero.jpg') no-repeat;
 		background-color: heroBgColor;
+		background-position: center top;
 		padding: 0;
+		max-width: none;
 	
 	&.content-wrapper
 		max-width: contentWrapperMaxWidth;
@@ -64,16 +67,15 @@ body
 	margin-bottom: 30px;
 	
 .hero
-	background: url('../img/hero.jpg') no-repeat;
 	height: 768px;
-	width: 100%;
+	max-width: wrapperMaxWidth;
 	background-position: center top;
 	box-sizing: border-box;
 	background-size: cover;
 	overflow: hidden;
 	font-size: 0;
 	padding: contentPadding;
-	
+	margin: 0 auto;
 	display: flex;
 	flex-flow: row wrap;
 	
