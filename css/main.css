@@ -40,6 +40,14 @@ body {
   background: url("../img/hero.jpg") no-repeat;
   background-color: #92b8ad;
   background-position: center top;
+}
+.wrapper.footer-wrapper {
+  background: url("../img/footerBg.jpg") no-repeat;
+  background-color: #92b8ad;
+  background-position: center top;
+  height: 511px;
+}
+.wrapper.wide-wrapper {
   padding: 0;
   max-width: none;
 }
