@@ -43,9 +43,10 @@ body {
 }
 .wrapper.footer-wrapper {
   background: url("../img/footerBg.jpg") no-repeat;
-  background-color: #92b8ad;
+  background-color: #542d4c;
   background-position: center top;
   height: 511px;
+  margin: 180px 0 0 0;
 }
 .wrapper.wide-wrapper {
   padding: 0;
@@ -61,6 +62,33 @@ body {
   margin-top: 30px;
   flex: 1 100%;
   margin-bottom: 30px;
+}
+.footer {
+  max-width: 1275px;
+  margin: 90px auto 0 auto;
+  overflow: hidden;
+}
+.decoration {
+  border-bottom: 10px solid #e03a6a;
+  width: 100px;
+  display: block;
+  margin: 0 auto;
+}
+.copyright-inner-wrapper {
+  width: 350px;
+  margin: 60px auto 40px;
+}
+.copyright-inner-wrapper .logo {
+  vertical-align: middle;
+  margin-right: 15px;
+  width: 56px;
+}
+.copyright-inner-wrapper .main-paragraph {
+  max-width: none;
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0;
+  color: #666;
 }
 .hero {
   height: 768px;
@@ -117,6 +145,14 @@ body {
   margin-top: 0;
   max-width: 450px;
 }
+.main-paragraph.negative {
+  color: #fff;
+  font-size: 20px;
+  text-align: center;
+  max-width: 760px;
+  margin: 40px auto;
+  line-height: 1.2;
+}
 .btn {
   background: #542d4c;
   border-radius: 30px;
@@ -148,6 +184,12 @@ body {
   margin-top: 135px;
   margin-bottom: 50px;
   color: #666;
+}
+.tertiaryTitle.negative {
+  color: #fff;
+  font-size: 25px;
+  margin-top: 100px;
+  margin-bottom: 20px;
 }
 .carousel-cell {
   background: #fff;

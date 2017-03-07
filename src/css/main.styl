@@ -13,6 +13,8 @@ mainTitleFontSize = 60px;
 
 //colors
 heroBgColor = #92b8ad;
+footerBgColor = #542d4c;
+decorationColor = #e03a6a;
 mainHighlightColor = #542d4c;
 secHighlightColor = #5eb098;
 lightestColor = #fff;
@@ -55,9 +57,10 @@ body
 		
 	&.footer-wrapper
 		background: url('../img/footerBg.jpg') no-repeat;
-		background-color: heroBgColor;
+		background-color: footerBgColor;
 		background-position: center top;
 		height: 511px;
+		margin: 180px 0 0 0;
 		
 	&.wide-wrapper
 		padding: 0;
@@ -73,6 +76,33 @@ body
 	margin-top: 30px;
 	flex: 1 100%;
 	margin-bottom: 30px;
+	
+.footer
+	max-width: wrapperMaxWidth;
+	margin: 90px auto 0 auto;
+	overflow: hidden;
+	
+.decoration
+	border-bottom: 10px solid decorationColor;
+	width: 100px;
+	display: block;
+	margin: 0 auto;
+	
+.copyright-inner-wrapper
+	width: 350px;
+	margin: 60px auto 40px;
+	
+	.logo
+		vertical-align: middle;
+		margin-right: 15px;
+		width: 56px;
+	
+	.main-paragraph
+		max-width: none;
+		display: inline-block;
+		vertical-align: middle;
+		margin: 0;
+		color: textColor;
 	
 .hero
 	height: 768px;
@@ -128,6 +158,14 @@ body
 	color: mainHighlightColor;
 	margin-top: 0;
 	max-width: 450px;
+	
+	&.negative
+		color: lightestColor;
+		font-size: tertiaryTitleFontSize;
+		text-align: center;
+		max-width: 760px;
+		margin: 40px auto;
+		line-height: 1.2;
 
 .btn
 	background: mainHighlightColor;
@@ -160,6 +198,12 @@ body
 	margin-top: 135px;
 	margin-bottom: 50px;
 	color: textColor;
+	
+	&.negative
+		color: lightestColor;
+		font-size: tertiaryTitleFontSize + 5px;
+		margin-top: 100px;
+		margin-bottom: 20px;
 		
 //flickity
 		
