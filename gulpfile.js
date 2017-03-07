@@ -37,4 +37,4 @@ gulp.task('webserver', function () {
 });
 
 gulp.task('process', ['css']);
-gulp.task('default', ['process', 'copy', 'watch', 'webserver']);
+gulp.task('default', ['copy', 'process', 'watch', 'webserver']);
